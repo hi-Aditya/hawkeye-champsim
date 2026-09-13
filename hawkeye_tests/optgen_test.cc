@@ -5,12 +5,10 @@
 #include <cstdint>
 
 int main() {
-  OPTgen opt(/*num_sets=*/1, /*associativity=*/2);
-  // TEST_VECTOR_START
+  OPTgen opt(/*num_sets=*/1, /*associativity=*/2);              //test vectors
   std::vector<std::pair<std::size_t, uint64_t>> accesses = {
-    // left empty; the grading script substitutes its own (set_idx, address) pairs here
+    // for grader to fill (set_idx, address) pairs
   };
-  // TEST_VECTOR_END
 
   int hits = 0;
   for (auto& [set_idx, addr] : accesses) {
