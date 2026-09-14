@@ -1,3 +1,4 @@
+// optgen_test.cc
 #include "../replacement/hawkeye/optgen.h"
 #include <iostream>
 #include <vector>
@@ -5,10 +6,12 @@
 #include <cstdint>
 
 int main() {
-  OPTgen opt(/*num_sets=*/1, /*associativity=*/2);              //test vectors
+  OPTgen opt(/*num_sets=*/1, /*associativity=*/2);
+  // TEST_VECTOR_START
   std::vector<std::pair<std::size_t, uint64_t>> accesses = {
-    // for grader to fill (set_idx, address) pairs
+    // left empty; the grading script substitutes its own (set_idx, address) pairs here
   };
+  // TEST_VECTOR_END
 
   int hits = 0;
   for (auto& [set_idx, addr] : accesses) {
@@ -18,4 +21,3 @@ int main() {
   }
   std::cout << "TOTAL HITS: " << hits << "\n";
 }
-
